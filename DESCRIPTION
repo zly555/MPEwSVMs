@@ -1,12 +1,13 @@
 Package: MPEwSVMs
-Title: What the Package Does (One Line, Title Case)
+Title: Multiclass probability estimation with weighted SVMs
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person(given = "Liyun",
+           family = "Zeng",
+           role = c("aut", "cre"),
+           email = "liyunzeng@gmail.com")
+Description: Multiclass probability estimation with weighted SVMs follow by "Zeng, L. and Zhang, H. H. (2022). Linear algorithms for nonparametric multiclass probability estimation. URL https://arxiv.org/abs/2205.12460".
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
