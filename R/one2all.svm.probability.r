@@ -9,6 +9,7 @@
 #' @param seed Set random seed
 #' @param eps Small threshold value
 #'
+#' @export
 #' @return OVA learning multiclass probability estimation as a list object
 
 one2all.svm.probability <- function(train.data, tune.data, test.data, data_dim,

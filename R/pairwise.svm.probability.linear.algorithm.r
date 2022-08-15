@@ -10,6 +10,7 @@
 #' @param seed Set random seed
 #' @param eps Small threshold value
 #'
+#' @export
 #' @return Baseline learning pairwise probability estimation as a list object
 
 pairwise.svm.probability.linear.algorithm <- function(train.data, tune.data, test.data,  data_dim, kernel = list(type = 'linear', param1 = NULL, param2 = NULL),

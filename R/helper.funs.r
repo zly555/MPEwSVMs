@@ -3,6 +3,7 @@
 #' @param y Label vector
 #' @param px Estimated probability
 #'
+#' @export
 #' @return EGKL value
 
 wsvm.egkl <- function(y, px) {
@@ -18,6 +19,7 @@ wsvm.egkl <- function(y, px) {
 #' @param p True probability
 #' @param phat Estimated probability
 #'
+#' @export
 #' @return GKL value
 
 gkl.cal <- function(p, phat){
@@ -33,6 +35,7 @@ gkl.cal <- function(p, phat){
 #' @param x_mu Mean vector
 #' @param Sigma Covariance matrix
 #'
+#' @export
 #' @return Density of multivariate normal distribution
 
 dmnorm <- function(x_mu, Sigma){
@@ -44,6 +47,7 @@ dmnorm <- function(x_mu, Sigma){
 #'
 #' @param vec Input R vector
 #'
+#' @export
 #' @return The minimum index with the minimum value of the given vector
 
 argmin <- function(vec) {
@@ -57,6 +61,7 @@ argmin <- function(vec) {
 #'
 #' @param vec Input R vector
 #'
+#' @export
 #' @return The maximum index with the maximum value of the given vector
 
 argmax <- function(vec){
@@ -71,6 +76,7 @@ argmax <- function(vec){
 #' @param dataXY Full multiclass data set
 #' @param data.dim Data dimesnionality
 #'
+#' @export
 #' @return  Two lists, one includes y and other any includes X for each class
 
 multiclass.separation <- function(dataXY, data.dim) {
@@ -105,6 +111,7 @@ multiclass.separation <- function(dataXY, data.dim) {
 #' @param dataXY Full multiclass data set
 #' @param data.dim Data dimesnionality
 #'
+#' @export
 #' @return Class label with the biggest class
 
 find.biggest.class <- function(dataXY, data.dim){
@@ -126,6 +133,7 @@ find.biggest.class <- function(dataXY, data.dim){
 #' @param data.dim Data dimesnionality
 #' @param sel_class Select class as {+1} class in binary wSVMs
 #'
+#' @export
 #' @return Data set with two classes for OVA method
 
 one2all_label_trans <- function(dataXY, data.dim, sel_class){
@@ -146,6 +154,7 @@ one2all_label_trans <- function(dataXY, data.dim, sel_class){
 #' @param data.dim Data dimesnionality
 #' @param num_class Total number of classes, as K
 #'
+#' @export
 #' @return A list include K OVA data
 
 data_one2all <- function(dataXY, data.dim, num_class){
@@ -168,6 +177,7 @@ data_one2all <- function(dataXY, data.dim, num_class){
 #' @param data.dim Data dimensionality
 #' @param seed Set random seed
 #'
+#' @export
 #' @return Pairwise classes with correct class label as {+1} and {-1}
 
 covert_to_binary <- function(class1, class2, data.dim, seed){
@@ -192,6 +202,7 @@ covert_to_binary <- function(class1, class2, data.dim, seed){
 #'
 #' @param c Input vector
 #'
+#' @export
 #' @return Softmax output vector
 
 softmax <- function(c){
@@ -203,6 +214,7 @@ softmax <- function(c){
 #'
 #' @param c Probability vector
 #'
+#' @export
 #' @return Normalized probability vector
 
 p_normalize <- function(c){
@@ -213,6 +225,7 @@ p_normalize <- function(c){
 #'
 #' @param x Input vector
 #'
+#' @export
 #' @return The index of median value
 
 find_median_index <- function(x) {
@@ -225,6 +238,7 @@ find_median_index <- function(x) {
 #' @param k1 First input
 #' @param k2 Second input
 #'
+#' @export
 #' @return Cantor mapping value
 
 cantor_mapping <- function(k1, k2) {return(0.5*(k1+k2)*(k1+k2+1)+k2)}
@@ -235,6 +249,7 @@ cantor_mapping <- function(k1, k2) {return(0.5*(k1+k2)*(k1+k2+1)+k2)}
 #' @param pjb Pairwise conditional probability of pj given (j,base)
 #' @param pjpb Pairwise conditional probability of pj' given (j',base)
 #'
+#' @export
 #' @return Pairwise conditional probability of pj given (j,j')
 
 pairwise_prob_infer <- function (pjb, pjpb) {return((pjb -pjb*pjpb)/(pjb+pjpb -2*pjb*pjpb))}

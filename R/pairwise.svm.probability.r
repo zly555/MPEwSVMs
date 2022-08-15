@@ -9,6 +9,7 @@
 #' @param seed Set random seed
 #' @param eps Small threshold value
 #'
+#' @export
 #' @return Pairwise coupling probability estimation as a list object
 
 pairwise.svm.probability <- function(train.data, tune.data, test.data,  data_dim, kernel = list(type = 'linear', param1 = NULL, param2 = NULL), tuning.criteria = 'GKL', seed = 1, eps = 1e-10){

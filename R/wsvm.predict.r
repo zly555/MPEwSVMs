@@ -6,6 +6,7 @@
 #' @param d Fitted classiifier d
 #' @param kernel Kernel to use
 #'
+#' @export
 #' @return Predicted label {+1,-1}
 
 wsvm.predict <- function(x, x.train, c, d, kernel = list(type = 'linear', param1 = NULL, param2 = NULL)){

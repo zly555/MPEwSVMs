@@ -3,6 +3,7 @@
 #' @param v Predicted Labels
 #' @param p Vector of weights
 #'
+#' @export
 #' @return Estimated probability for {+1} class
 
 prob.estimate<- function(v, p){

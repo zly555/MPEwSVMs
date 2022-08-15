@@ -2,6 +2,7 @@
 #'
 #' @param Amat Input Matrix
 #'
+#' @export
 #' @return Compact matrix form for quodprog input
 
 QP.compact.matrix <- function(Amat){

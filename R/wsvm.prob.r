@@ -8,6 +8,7 @@
 #' @param lambda Regularization params
 #' @param eps small threshold
 #'
+#' @export
 #' @return List of probability estimation object
 
 wsvm.prob <- function(x.train, y.train, x.test, y.test, kernel = list(type = 'linear', param1 = NULL, param2 = NULL), lambda , eps = 1e-10){

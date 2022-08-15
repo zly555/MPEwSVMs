@@ -9,6 +9,7 @@
 #' @param actual_labels True labels
 #' @param actual_prob True probability
 #'
+#' @export
 #' @return Reconstructed pairwise coupling probability estimation table from baseline learning as a list object
 
 pairwise.svm.probability.linear.time.reconstruct <- function(estimate_prob_binary_classes_base, base_class, num_class, pair_indexes, sum_prob_difference, actual_labels, actual_prob){

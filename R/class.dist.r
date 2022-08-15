@@ -2,6 +2,7 @@
 #'
 #' @param classX Input class for calculate the Dcp
 #'
+#' @export
 #' @return Within class compactness
 
 within_class_compactness <- function(classX){
@@ -38,6 +39,7 @@ within_class_compactness <- function(classX){
 #' @param list_classes_X List of X for all classes
 #' @param calculate_between_class_dist Boolean to indicate whether to calculate the between class distance for baseline method 2
 #'
+#' @export
 #' @return Theclass index of the median of between class distance or the SigmaM
 
 median_class_distance <- function(list_classes_X, calculate_between_class_dist = FALSE){

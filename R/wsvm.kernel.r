@@ -10,6 +10,7 @@
 #'                   param1 = sigma scale for 'rbf',
 #'                   param1,2 = kapa1 and kapa2 for 'nn')
 #'
+#' @export
 #' @return A nrow(U) x nrow(V) kernel matrix
 
 wsvm.kernel <- function(U, V, kernel = list(type = 'linear', param1 = NULL, param2 = NULL)) {

@@ -8,6 +8,7 @@
 #' @param lambda Regulatory parameter for solving weighted SVMs, lambda > 0
 #' @param eps  Small threshold
 #'
+#' @export
 #' @return  Model object as a list consists of model fit: c, d, alpha, and sv
 
 wsvm <- function(x.train, y.train, PI = 0.5, kernel = list(type = 'linear', param1 = NULL, param2 = NULL), lambda = 0.01, eps = 1e-10){

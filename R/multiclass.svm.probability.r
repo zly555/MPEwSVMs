@@ -6,6 +6,7 @@
 #' @param actual_prob True probability
 #' @param pair_indexes Pairwise class indexes
 #'
+#' @export
 #' @return Multiclass class probaility estimation matrix
 
 multiclass.svm.probability <- function(pairwise.prob, k_class, actual_labels, actual_prob, pair_indexes){
