@@ -6,13 +6,11 @@ Authors@R:
            family = "Zeng",
            role = c("aut", "cre"),
            email = "liyunzeng@gmail.com")
-Description: Multiclass probability estimation with weighted SVMs follow by 
-"Zeng, L. and Zhang, H. H. (2022). Linear algorithms for nonparametric multiclass probability estimation". 
-URL https://arxiv.org/abs/2205.12460.
+Description: Multiclass probability estimation with weighted SVMs follow by "Zeng, L. and Zhang, H. H. (2022). Linear algorithms for nonparametric multiclass probability estimation". URL https://arxiv.org/abs/2205.12460.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
 Suggests: 
     renv,
     dplyr
