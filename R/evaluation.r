@@ -1,6 +1,4 @@
-#
-# pk = [p(x1),p(x2) ... p(xn)]k
-# p, phat is a n.data * nclass matrix
+
 #' Evaluate the probability estimation performance
 #'
 #' @param p True probability matrix
@@ -63,8 +61,7 @@ prob.evaluation <- function(p, phat, method = list(type = 'egkl')) {
 
 
 
-#
-# and output test error based on the evaluation set
+
 #' Function to evaluate the multi-class SVM probability estimation performance
 #'
 #' @param multiclass.prob Multiclass probability estimation matrix
@@ -142,7 +139,6 @@ evaluate_performance <- function(multiclass.prob, methods = list(type = 'pairwis
 }
 
 
-### generate the MP matrix for reliability diagram ####
 #' Generate the MP matrix for reliability diagram
 #'
 #' @param mp Multiclass probability matrix
