@@ -1,0 +1,26 @@
+Package: MPEwSVMs
+Title: Multiclass probability estimation with weighted SVMs
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Liyun",
+           family = "Zeng",
+           role = c("aut", "cre"),
+           email = "liyunzeng@gmail.com")
+Description: Multiclass probability estimation with weighted SVMs follow by "Zeng, L. and Zhang, H. H. (2022). Linear algorithms for nonparametric multiclass probability estimation". URL https://arxiv.org/abs/2205.12460.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Suggests: 
+    renv,
+    dplyr
+Imports: 
+    MASS,
+    data.table,
+    quadprog,
+    glmnet,
+    nnet,
+    randomForest,
+    tree,
+    xgboost,
+    tictoc
