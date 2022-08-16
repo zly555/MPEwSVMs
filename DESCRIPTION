@@ -1,6 +1,6 @@
 Package: MPEwSVMs
 Title: Multiclass probability estimation with weighted SVMs
-Version: 0.0.0.9000
+Version: 1.0.1
 Authors@R: 
     person(given = "Liyun",
            family = "Zeng",
