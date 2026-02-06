@@ -5,7 +5,8 @@ Authors@R:
     person(given = "Liyun",
            family = "Zeng",
            role = c("aut", "cre"),
-           email = "liyunzeng@gmail.com")
+           email = "liyunzeng@gmail.com"), comment = c(ORCID = "0000-0001-5959-8295"))
+
 Description: Multiclass probability estimation with weighted SVMs follow by "Zeng, L. and Zhang, H. H. (2022). Linear algorithms for nonparametric multiclass probability estimation". URL https://arxiv.org/abs/2205.12460.
 License: GPL (>= 3)
 Encoding: UTF-8
