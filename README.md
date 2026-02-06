@@ -9,8 +9,7 @@
 The goal of MPEwSVMs package is to perform the multiclass probability
 estimation with weighted SVMs, using the pairwise coupling, One-vs-All
 (OVA), and baseline learning algorithms from: “Zeng, L. and Zhang, H. H.
-(2022). Linear algorithms for nonparametric multiclass probability
-estimation”. [(arXiv Link)](https://arxiv.org/abs/2205.12460).
+(2022). Linear Algorithms for Robust and Scalable Nonparametric Multiclass Probability Estimation”. [(arXiv Link)](https://arxiv.org/abs/2205.12460).
 
 ## Installation
 
