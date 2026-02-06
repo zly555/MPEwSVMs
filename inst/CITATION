@@ -1,0 +1,17 @@
+bibentry(
+  bibtype = "Article",
+  title = "Linear Algorithms for Robust and Scalable Nonparametric Multiclass Probability Estimation",
+  author = c(
+    person(given = "Liyun", family = "Zeng"),
+    person(given = "Hao Helen", family = "Zhang")
+  ),
+  year = "2022",
+  journal = "arXiv preprint",
+  url = "https://arxiv.org/abs/2205.12460",
+  note = "arXiv:2205.12460 [stat.ML]",
+  textVersion = paste(
+    "Zeng, L., & Zhang, H. H. (2022).",
+    "Linear Algorithms for Robust and Scalable Nonparametric Multiclass Probability Estimation",
+    "arXiv preprint arXiv:2205.12460."
+  )
+)
