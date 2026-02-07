@@ -12,25 +12,23 @@ Description: Implements linear algorithms for nonparametric multiclass
     The package provides efficient methods for estimating class 
     probabilities in a multiclass framework by leveraging specialized 
     weighting schemes. Based on the methodology in Zeng and Zhang (2022) 
-    "Linear Algorithms for Robust and Scalable Nonparametric Multiclass Probability Estimation" <arXiv:2205.12460>.
+    "Linear Algorithms for Robust and Scalable Nonparametric Multiclass 
+    Probability Estimation" <arXiv:2205.12460>.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-License: GPL (>= 3)
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
 Suggests: 
     renv,
     dplyr
 Imports: 
-    MASS,
     data.table,
-    quadprog,
     glmnet,
+    MASS,
     nnet,
+    quadprog,
     randomForest,
+    tictoc,
     tree,
-    xgboost,
-    tictoc
+    xgboost
+    
