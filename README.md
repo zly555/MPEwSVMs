@@ -153,12 +153,13 @@ print(ep$TestClassificationError[1:2])
 
 # Tuning with EGKL, with RBF kernel 
 tictoc::tic()
-  result <- one2all.svm.probability (train.data$data, 
-                                     tune.data$data, 
-                                     test.data$data, 
-                                     data_dim = train.data$data_dim, 
-                                     kernel = list(type = 'rbf', param1 = 1, param2 = NULL), 
-                                     tuning.criteria = 'EGKL')
+  result <- one2all.svm.probability (
+      						 train.data$data, 
+                             tune.data$data, 
+                             test.data$data, 
+                             data_dim = train.data$data_dim, 
+                             kernel = list(type = 'rbf', param1 = 1, param2 = NULL), 
+                             tuning.criteria = 'EGKL')
   
   # Evaluation performance maxtrix
   ep <- evaluate_performance(result$estimate_multiclass_prob_matrix, 
@@ -191,22 +192,23 @@ print(ep$TestClassificationError[1:2])
 
 # Tuning with EGKL, with RBF kernel, choose baseline with method 1 
 tictoc::tic()
-  result <-pairwise.svm.probability.linear.algorithm(train.data$data, 
-                                                     tune.data$data, 
-                                                     test.data$data, 
-                                                     data_dim = train.data$data_dim, 
-                                                     kernel = list(type = 'rbf', param1 = 1, param2 = NULL),
-                                                     linear.time.algorithm = list(type = 'largestClSize'), 
-                                                     tuning.criteria = 'EGKL')
+  result <-pairwise.svm.probability.linear.algorithm(
+                               train.data$data, 
+                               tune.data$data, 
+                               test.data$data, 
+                               data_dim = train.data$data_dim, 
+                               kernel = list(type = 'rbf', param1 = 1, param2 = NULL),
+                               linear.time.algorithm = list(type = 'largestClSize'), 
+                               tuning.criteria = 'EGKL')
 
   # Multiclass probability estimation matrix
   mp <- multiclass.svm.probability.linear.algorithm(
-      					            pairwise.prob = result$estimate_prob_binary_classes_base, 
-                                    base_class = result$base_class,
-                                    k_class = result$k_class,
-                                    actual_labels = result$actual_labels,
-                                    actual_prob = result$actual_prob,
-                                    pair_indexes = result$pair_indexes)
+                                pairwise.prob = result$estimate_prob_binary_classes_base, 
+                                base_class = result$base_class,
+                                k_class = result$k_class,
+                                actual_labels = result$actual_labels,
+                                actual_prob = result$actual_prob,
+                                pair_indexes = result$pair_indexes)
                                                     
   # Evaluation performance matrix
   ep <- evaluate_performance(mp, methods = list(type = 'liner_time'))
@@ -243,21 +245,22 @@ print(result$base_class)
 tictoc::tic()
 # Reconstruct the pairwise probability table based on baseline learning algorithm from 3
   result_pairwise <- pairwise.svm.probability.linear.time.reconstruct(
-                          estimate_prob_binary_classes_base = result$estimate_prob_binary_classes_base,
-                          base_class = result$base_class,
-                          num_class = result$k_class,
-                          pair_indexes = result$pair_indexes,
-                          sum_prob_difference = result$sum_prob_difference, 
-                          actual_labels = result$actual_labels, 
-                          actual_prob = result$actual_prob)
+                  estimate_prob_binary_classes_base = result$estimate_prob_binary_classes_base,
+                  base_class = result$base_class,
+                  num_class = result$k_class,
+                  pair_indexes = result$pair_indexes,
+                  sum_prob_difference = result$sum_prob_difference, 
+                  actual_labels = result$actual_labels, 
+                  actual_prob = result$actual_prob)
 
 
   # Multiclass probability estimation matrix
-  mp <- multiclass.svm.probability(pairwise.prob = result_pairwise$estimate_prob_binary_classes, 
-                                   k_class = result_pairwise$k_class, 
-                                   actual_labels = result_pairwise$actual_labels, 
-                                   actual_prob = result_pairwise$actual_prob, 
-                                   pair_indexes = result_pairwise$pair_indexes)
+  mp <- multiclass.svm.probability(
+               pairwise.prob = result_pairwise$estimate_prob_binary_classes, 
+               k_class = result_pairwise$k_class, 
+               actual_labels = result_pairwise$actual_labels, 
+               actual_prob = result_pairwise$actual_prob, 
+               pair_indexes = result_pairwise$pair_indexes)
   
   # Evaluation performance matrix
   ep <- evaluate_performance(mp, methods = list(type = 'pairwise'))
