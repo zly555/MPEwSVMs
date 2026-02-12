@@ -42,7 +42,7 @@ library(MPEwSVMs)
 ### Generate the Simulated Data
 
 ``` r
-generator <- function(n, seed=1){
+generator <- function(n, seed = 42){
   
   set.seed (seed)
 
