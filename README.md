@@ -107,7 +107,7 @@ test.data <- generator(n=10*n, seed = rand_seed[3])
   ##############
 
 # Tuning with EGKL, with RBF kernel 
-  tic()
+tictoc::tic()
   result <- pairwise.svm.probability(train.data$data, 
                                      tune.data$data, 
                                      test.data$data, 
@@ -125,7 +125,7 @@ test.data <- generator(n=10*n, seed = rand_seed[3])
   # Evaluation performance matrix
   ep <- evaluate_performance(mp, methods = list(type = 'pairwise'))
     
-T.diff <- toc()
+T.diff <- tictoc::toc()
 
 elapsed_time <- round(as.numeric(T.diff$toc - T.diff$tic)/60, 3)
 
@@ -152,7 +152,7 @@ print(ep$TestClassificationError[1:2])
   ################
 
 # Tuning with EGKL, with RBF kernel 
-  tic()
+tictoc::tic()
   result <- one2all.svm.probability (train.data$data, 
                                      tune.data$data, 
                                      test.data$data, 
@@ -164,7 +164,7 @@ print(ep$TestClassificationError[1:2])
   ep <- evaluate_performance(result$estimate_multiclass_prob_matrix, 
                              methods = list(type ='one2rest'))
 
-T.diff <- toc()
+T.diff <- tictoc::toc()
 elapsed_time <- round(as.numeric(T.diff$toc - T.diff$tic)/60, 3)
 
 # The running time depends on the tuning size and the computation environment
@@ -190,7 +190,7 @@ print(ep$TestClassificationError[1:2])
   ##############
 
 # Tuning with EGKL, with RBF kernel, choose baseline with method 1 
-  tic()
+tictoc::tic()
   result <-pairwise.svm.probability.linear.algorithm(train.data$data, 
                                                      tune.data$data, 
                                                      test.data$data, 
@@ -210,7 +210,7 @@ print(ep$TestClassificationError[1:2])
   # Evaluation performance matrix
   ep <- evaluate_performance(mp, methods = list(type = 'liner_time'))
   
-T.diff <- toc()
+T.diff <- tictoc::toc()
 elapsed_time <- round(as.numeric(T.diff$toc - T.diff$tic)/60, 3)
 
 # The running time depends on the tuning size and the computation environment
@@ -239,7 +239,7 @@ print(result$base_class)
   ## Baseline Pairwise Reconstruction ##
   ######################################
 
-tic()
+tictoc::tic()
 # Reconstruct the pairwise probability table based on baseline learning algorithm from 3
   result_pairwise <- pairwise.svm.probability.linear.time.reconstruct(
                               estimate_prob_binary_classes_base =result$estimate_prob_binary_classes_base,
@@ -261,7 +261,7 @@ tic()
   # Evaluation performance matrix
   ep <- evaluate_performance(mp, methods = list(type = 'pairwise'))
   
-T.diff.reconst <- toc()
+T.diff.reconst <- tictoc::toc()
 # The time includes the baseline learning from 3, and pairwise table reconstruction 
 elapsed_time <- round(as.numeric(T.diff.reconst$toc - T.diff.reconst$tic)/60, 3) + elapsed_time
 
