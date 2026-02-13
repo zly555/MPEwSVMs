@@ -177,7 +177,7 @@ print(ep$evaluationMat)
 # 0.2010323 0.02437899 0.1042973 0.1050824
 
 # get the test error
-print(ep$TestClassificationError[1:2])
+print(ep$TestClassificationError)
 #  TestErr_MaxP TestErr_Voting
 #     0.2379             NA
 ```
@@ -224,7 +224,7 @@ print(ep$evaluationMat)
 # 0.2024622 0.02562124 0.133561 0.1041888
 
 # get the test error
-print(ep$TestClassificationError[1:2])
+print(ep$TestClassificationError)
 #  TestErr_MaxP TestErr_Voting
 #     0.2403             NA
 
