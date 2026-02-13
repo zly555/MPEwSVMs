@@ -156,6 +156,7 @@ tictoc::tic()
   result <- one2all.svm.probability (train.data$data, 
                                      tune.data$data, 
                                      test.data$data,
+                                     data_dim = train.data$data_dim,
                                      kernel = list(type = 'rbf', param1 = 1, param2 = NULL),
                                      tuning.criteria = 'EGKL')
   
