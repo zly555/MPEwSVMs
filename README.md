@@ -6,10 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of MPEwSVMs package is to perform the multiclass probability
-estimation with weighted SVMs, using the pairwise coupling, One-vs-All
-(OVA), and baseline learning algorithms from: “Zeng, L. and Zhang, H. H.
-(2022). Linear Algorithms for Robust and Scalable Nonparametric Multiclass Probability Estimation”. [(arXiv Link)](https://arxiv.org/abs/2205.12460).
+The goal of MPEwSVMs package is to perform the multiclass probability estimation with weighted SVMs, using the pairwise coupling, One-vs-All (OVA), and baseline learning algorithms from: “Zeng, L. and Zhang, H. H. (2022). Linear Algorithms for Robust and Scalable Nonparametric Multiclass Probability Estimation”. [(arXiv Link)](https://arxiv.org/abs/2205.12460).
 
 ## Installation
 
@@ -33,9 +30,9 @@ for demonstration.
 
 ``` r
 library(quadprog)
-library(data.table, warn.conflicts = FALSE)
-library(dplyr, warn.conflicts = FALSE)
-library(tictoc, warn.conflicts = FALSE)
+library(data.table)
+library(dplyr)
+library(tictoc)
 library(MPEwSVMs)
 ```
 
@@ -178,8 +175,8 @@ print(ep$evaluationMat)
 
 # get the test error
 print(ep$TestClassificationError)
-#  TestErr_MaxP TestErr_Voting
-#     0.2379             NA
+#   test_error_maxP
+# 1          0.2379
 ```
 
 **3. Baseline learning approach (B-SVM)**
@@ -225,8 +222,8 @@ print(ep$evaluationMat)
 
 # get the test error
 print(ep$TestClassificationError)
-#  TestErr_MaxP TestErr_Voting
-#     0.2403             NA
+#   test_error_maxP
+# 1          0.2403
 
 # get the select baseline class
 print(result$base_class) 
@@ -284,10 +281,4 @@ print(ep$TestClassificationError[1:2])
 
 ### Conclusion
 
-We developed the R package to perform the multiclass probability
-estimation with wSVMs. The statistical performance needs to perform
-Monte Carlo simulations. The baseline learning has close performance
-with pairwise coupling method with fast computation time, and OVA
-learning has the best performance. More examples and detail complexity
-analysis check the paper at [Zeng et
-al.](https://arxiv.org/abs/2205.12460).
+We developed the R package to perform the multiclass probability estimation with wSVMs. The statistical performance needs to perform Monte Carlo simulations. The baseline learning has close performance with pairwise coupling method with fast computation time, and OVA learning has the best performance. More examples and detail complexity analysis check the paper at [Zeng et al.](https://arxiv.org/abs/2205.12460).
